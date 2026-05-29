@@ -164,7 +164,7 @@ export class Productservice {
     "price": 490.99,
     "description": "Elegant white satin nightwear set including a robe, bralette, and shorts.",
     "category": "lingerie",
-    "image": "public/whiteNightwear.webp"
+    "image": "/whiteNightwear.webp"
   }
   ]
      getProduct(){
