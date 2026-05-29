@@ -163,7 +163,7 @@ export class Productservice {
       "price": 490.99,
       "description": "Elegant white satin nightwear set including a kimono-style robe, bralette, and shorts. Soft satin fabric with lace trim accents — ideal for honeymoons or special occasions.",
       "category": "lingerie",
-      "image": "public/whiteNightwear.webp",
+     "image": "/whiteNightwear.webp",
     }
   ]
 

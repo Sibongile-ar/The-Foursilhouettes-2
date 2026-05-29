@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { Productservice } from '../services/productservice';
 import { Cartservice } from '../services/cartservice';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './home.html',
   styleUrls: ['./home.css']
 })
-export class HomeComponent {
+export class Home {
 
   products: any[] = [];
 
@@ -21,7 +22,9 @@ export class HomeComponent {
     private productService: Productservice,
     private cartService: Cartservice
   ) {
-    this.products = this.productService.getProducts();
+   this.products = this.productService
+  .getProducts()
+  .slice(0, 4);
   }
 
   addToCart(product: any) {

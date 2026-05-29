@@ -1,26 +1,5 @@
-<!-- HEADER -->
-<header>
-  <div class="nav-container">
 
-    <h1>The Four Silhouettes</h1>
-
-    <div class="menu-toggle">
-      &#9776;
-    </div>
-
-    <nav>
-      <a href="#heroSection">Home</a>
-      <a href="#shop">Shop</a>
-      <a href="#about">About</a>
-      <a href="/cart.html" class="cart">
-        Cart (0)
-      </a>
-    </nav>
-
-  </div>
-</header>
-
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section id="heroSection" class="hero">
 
   <h2>
@@ -31,7 +10,7 @@
     Luxury lingerie designed for every body and every size
   </p>
 
-  <a href="#shop" class="btn">
+  <a routerLink="/shop" class="btn">
     Shop Now
   </a>
 
@@ -46,7 +25,7 @@
   >
 
     <img
-      [src]="'/assets' + product.image"
+      [src]="product.image"
       [alt]="product.title"
       width="300"
       height="400"
@@ -117,88 +96,15 @@
 
 </section>
 
-<section id="shop" class="products">
+<!-- ABOUT -->
+<section id="about" class="content">
 
-  <div class="product-card" *ngFor="let product of products">
+  <h2>About Us</h2>
 
-    <img
-      [src]="'/assets' + product.image"
-      [alt]="product.title"
-      width="300"
-      height="400"
-    />
-
-    <h3>{{ product.title }}</h3>
-
-    <p>{{ product.description }}</p>
-
-    <p class="price">
-      R{{ product.price }}
-    </p>
-
-    <div class="sizes">
-
-      <label>
-        <input
-          type="radio"
-          [name]="'size' + product.id"
-          value="S"
-          [(ngModel)]="selectedSizes[product.id]"
-        >
-        S
-      </label>
-
-      <label>
-        <input
-          type="radio"
-          [name]="'size' + product.id"
-          value="M"
-          [(ngModel)]="selectedSizes[product.id]"
-        >
-        M
-      </label>
-
-      <label>
-        <input
-          type="radio"
-          [name]="'size' + product.id"
-          value="L"
-          [(ngModel)]="selectedSizes[product.id]"
-        >
-        L
-      </label>
-
-      <label>
-        <input
-          type="radio"
-          [name]="'size' + product.id"
-          value="XL"
-          [(ngModel)]="selectedSizes[product.id]"
-        >
-        XL
-      </label>
-
-    </div>
-
-    <br>
-
-    <button
-      class="add-to-cart"
-      (click)="addToCart(product)"
-    >
-      Add to Cart
-    </button>
-
-  </div>
+  <p>
+    The Four Silhouettes is a modern brand focused on confidence,
+    comfort, and style. We believe every person deserves to feel
+    bold and beautiful in what they wear.
+  </p>
 
 </section>
- <section id="about" class="content">
-    <h2>About Us</h2>
-    <b>
-      <br>
-      <p>
-        The Four Silhouettes is a modern brand focused on confidence, comfort, and
-        style. We believe every person deserves to feel bold and beautiful in
-        what they wear.
-      </p>
-  </section>
