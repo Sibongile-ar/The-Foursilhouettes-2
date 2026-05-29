@@ -4,7 +4,6 @@ import { Cartservice } from '../services/cartservice';
 import { Productservice } from '../services/productservice';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { Router } from '@angular/router';
 
 
 @Component({
