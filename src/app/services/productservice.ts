@@ -67,7 +67,7 @@ export class Productservice {
       "price": 440.99,
       "description": "Luxurious black silk satin slip dress and robe set. Ultra-soft satin fabric drapes elegantly over the body with lace trim accents for a touch of romance.",
       "category": "lingerie",
-      "image": "/BlackSilk Set.webp",
+      "image": "/Blacksilkset.webp",
     },
     {
       "id": 9,
@@ -155,7 +155,7 @@ export class Productservice {
       "price": 440.99,
       "description": "Essential five-pack of wireless t-shirt bras in nude, black, white, grey, and blush. Lightly padded cups with a smooth moulded finish — invisible under any top.",
       "category": "bras",
-      "image": "/fivepiece.jpeg", 
+      "image": "/fivepiece.jpeg",
     },
     {
       "id": 20,
