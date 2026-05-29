@@ -1,1 +1,34 @@
-<p>cart works!</p>
+<div *ngIf="cartItems.length === 0">
+  <p class="empty-cart">Your cart is empty</p>
+</div>
+
+<div class="cart-container">
+
+  <div class="product-card" *ngFor="let item of cartItems; let i = index">
+
+    <!-- IMAGE -->
+    <img [src]="item.image" alt="{{ item.name }}">
+
+    <!-- PRODUCT INFO -->
+    <h3>{{ item.title }}</h3>
+
+    <p>Price: R{{ item.price }}</p>
+
+    <p>Size: {{ item.size }}</p>
+
+    <p>Quantity: {{ item.quantity }}</p>
+
+    <!-- SUBTOTAL -->
+    <p class="subtotal">
+      Total: R{{ item.price * item.quantity }}
+    </p>
+
+  </div>
+
+</div>
+
+<!-- GRAND TOTAL -->
+
+<h2 class="grand-total">
+  Cart Total: R{{ total }}
+</h2>
