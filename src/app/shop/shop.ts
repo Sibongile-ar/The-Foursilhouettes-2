@@ -4,6 +4,8 @@ import { Cartservice } from '../services/cartservice';
 import { Productservice } from '../services/productservice';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-shop',
@@ -19,6 +21,12 @@ export class Shop {
   cartService = inject(Cartservice);
 
   selectedSizes: { [key: number]: string } = {};
+
+  searchText: string = '';
+
+  selectedCategory: string = 'All';
+
+
 
   addToCart(product: any) {
 
@@ -38,5 +46,24 @@ export class Shop {
     this.cartService.addToCart(cartProduct);
 
     alert('Added to cart!');
+  }
+
+  setCategory(cat: string) {
+    this.selectedCategory = cat;
+  }
+
+
+  filteredList() {
+    return this.productList.filter(product => {
+  
+      const matchesSearch =
+        product.title.toLowerCase().includes(this.searchText.toLowerCase());
+  
+      const matchesCategory =
+        this.selectedCategory === 'All' ||
+        product.category === this.selectedCategory;
+  
+      return matchesSearch && matchesCategory;
+    });
   }
 }

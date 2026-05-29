@@ -1,11 +1,52 @@
 <div class="products-container">
 
     <h2>Our Products</h2>
+
+    <div class="search-bar">
+        <input 
+          type="text" 
+          placeholder="Search products..."
+        [(ngModel)]="searchText"
+        />
+      </div>
+
+      <div class="category-filters">
+
+        <div class="category-filters">
+
+            <button 
+              (click)="setCategory('All')"
+              [class.active]="selectedCategory === 'All'">
+              All
+            </button>
+          
+            <button 
+              (click)="setCategory('lingerie')"
+              [class.active]="selectedCategory === 'lingerie'">
+              Lingerie
+            </button>
+          
+            <button 
+              (click)="setCategory('panties')"
+              [class.active]="selectedCategory === 'panties'">
+              Panties
+            </button>
+          
+            <button 
+              (click)="setCategory('bras')"
+              [class.active]="selectedCategory === 'bras'">
+              Bras
+            </button>
+          
+          </div>
+      
+      </div>
   
     <div class="products-grid">
   
-      <div class="product-card" *ngFor="let product of productList">
-  
+      <!-- <div class="product-card" *ngFor="let product of productList"> -->
+        <div class="product-card" *ngFor="let product of filteredList()">
+
         <img [src]="product.image" alt="images">
         <h3>{{ product.title }}</h3>
         <p class="description"> {{product.description}}</p>
