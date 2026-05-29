@@ -1,1 +1,109 @@
-<p>home works!</p>
+<!-- HERO -->
+<section id="heroSection" class="hero">
+
+  <h2>
+    Feel Confident. Feel Sexy.
+  </h2>
+
+  <p>
+    Luxury lingerie designed for every body and every size
+  </p>
+
+  <a routerLink="/shop" class="btn">
+    Shop Now
+  </a>
+
+</section>
+
+<!-- PRODUCTS -->
+<section id="shop" class="products">
+
+  <div
+    class="product-card"
+    *ngFor="let product of products"
+  >
+
+    <img
+      [src]="product.image"
+      [alt]="product.title"
+      width="300"
+      height="400"
+    />
+
+    <h3>{{ product.title }}</h3>
+
+    <p>{{ product.description }}</p>
+
+    <p class="price">
+      R{{ product.price }}
+    </p>
+
+    <div class="sizes">
+
+      <label>
+        <input
+          type="radio"
+          [name]="'size' + product.id"
+          value="S"
+          [(ngModel)]="selectedSizes[product.id]"
+        >
+        S
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          [name]="'size' + product.id"
+          value="M"
+          [(ngModel)]="selectedSizes[product.id]"
+        >
+        M
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          [name]="'size' + product.id"
+          value="L"
+          [(ngModel)]="selectedSizes[product.id]"
+        >
+        L
+      </label>
+
+      <label>
+        <input
+          type="radio"
+          [name]="'size' + product.id"
+          value="XL"
+          [(ngModel)]="selectedSizes[product.id]"
+        >
+        XL
+      </label>
+
+    </div>
+
+    <br>
+
+    <button
+      class="add-to-cart"
+      (click)="addToCart(product)"
+    >
+      Add to Cart
+    </button>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="content">
+
+  <h2>About Us</h2>
+
+  <p>
+    The Four Silhouettes is a modern brand focused on confidence,
+    comfort, and style. We believe every person deserves to feel
+    bold and beautiful in what they wear.
+  </p>
+
+</section>
