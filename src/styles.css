@@ -1,5 +1,11 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a0005, #4d0f1a, #b35c73);
+    color: #fff;
 }
