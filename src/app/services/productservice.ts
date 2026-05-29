@@ -8,7 +8,7 @@ export class Productservice {
     {
       "id": 1,
       "title": "Blue Floral Lace Lingerie Set",
-      "price": 24.99,
+      "price": 240.99,
       "description": "Delicate blue floral lace bra and panty set with soft underwire support and intricate floral embroidery. Perfect for a romantic evening or everyday luxury.",
       "category": "lingerie",
       "image": "/bluefloral.jpeg",
@@ -16,7 +16,7 @@ export class Productservice {
     {
       "id": 2,
       "title": "Pink Sheer Lingerie Piece",
-      "price": 29.99,
+      "price": 290.99,
       "description": "Elegant pink sheer one-piece lingerie with lace trim detailing. Features adjustable straps and a flattering silhouette for all body types.",
       "category": "lingerie",
       "image": "/pinklingeriepiece.jpeg",
@@ -24,7 +24,7 @@ export class Productservice {
     {
       "id": 3,
       "title": "Floral Black Lace Lingerie Set",
-      "price": 34.99,
+      "price": 340.99,
       "description": "Sophisticated black floral lace two-piece set with a balconette bra and matching high-waist brief. Timeless design with a modern twist.",
       "category": "lingerie",
       "image": "/floralblack.jpeg",
@@ -32,7 +32,7 @@ export class Productservice {
     {
       "id": 4,
       "title": "Red Strappy Lingerie Set",
-      "price": 39.99,
+      "price": 390.99,
       "description": "Bold red strappy lingerie set with intricate cage-style detailing. This daring design features adjustable straps and a plunge neckline for a seductive look.",
       "category": "lingerie",
       "image": "/rednumber.jpeg",
@@ -40,7 +40,7 @@ export class Productservice {
     {
       "id": 5,
       "title": "Leopard Print Lingerie Thong Set",
-      "price": 22.99,
+      "price": 220.99,
       "description": "Wild and alluring leopard print bra and thong set. Soft microfiber fabric with animal print pattern, underwire bra with adjustable straps.",
       "category": "lingerie",
       "image": "/leopardlingerie.jpeg",
@@ -48,7 +48,7 @@ export class Productservice {
     {
       "id": 6,
       "title": "Green Sexy Strappy Lingerie Set",
-      "price": 36.99,
+      "price": 360.99,
       "description": "Striking emerald green strappy lingerie set featuring a wrap-style bra and matching thong. The bold color and sleek design make it an eye-catching choice.",
       "category": "lingerie",
       "image": "/Greensexylingerie.webp",
@@ -56,7 +56,7 @@ export class Productservice {
     {
       "id": 7,
       "title": "Blue Lace Lingerie Piece",
-      "price": 27.99,
+      "price": 270.99,
       "description": "Beautiful royal blue lace one-piece babydoll lingerie with scalloped hem and spaghetti straps. Features a flowy silhouette with a matching thong.",
       "category": "lingerie",
       "image": "/Bluelingeriepiece.jpeg",
@@ -64,7 +64,7 @@ export class Productservice {
     {
       "id": 8,
       "title": "Black Silk Satin Lingerie Set",
-      "price": 44.99,
+      "price": 440.99,
       "description": "Luxurious black silk satin slip dress and robe set. Ultra-soft satin fabric drapes elegantly over the body with lace trim accents for a touch of romance.",
       "category": "lingerie",
       "image": "/BlackSilk Set.webp",
@@ -72,7 +72,7 @@ export class Productservice {
     {
       "id": 9,
       "title": "Four-Pack Thong Set",
-      "price": 18.99,
+      "price": 180.99,
       "description": "Value pack of four colorful thongs in assorted colors. Made from soft stretch fabric with a comfortable waistband. Perfect for everyday wear or gifting.",
       "category": "panties",
       "image": "/fourthongs.jpeg",
@@ -80,7 +80,7 @@ export class Productservice {
     {
       "id": 10,
       "title": "Red Lace G-String",
-      "price": 9.99,
+      "price": 90.99,
       "description": "Seductive red lace G-string with delicate floral lace fabric and thin elastic waistband. Barely-there design for seamless wear under any outfit.",
       "category": "panties",
       "image": "/redgstring.jpeg",
@@ -88,7 +88,7 @@ export class Productservice {
     {
       "id": 11,
       "title": "Two-Piece Lace Panty Set",
-      "price": 14.99,
+      "price": 140.99,
       "description": "Set of two elegant lace panties in complementary neutral tones. Features a low-rise cut with scalloped lace trim and soft elastic waistband.",
       "category": "panties",
       "image": "/twolacepanties.jpeg",
@@ -96,7 +96,7 @@ export class Productservice {
     {
       "id": 12,
       "title": "Five-Pack Mixed Panty Set",
-      "price": 24.99,
+      "price": 240.99,
       "description": "Versatile five-pack of mixed-style panties including bikinis, briefs, and thongs in a variety of colors and fabrics. Great value for everyday essentials.",
       "category": "panties",
       "image": "/fivepanties.jpeg",
@@ -104,7 +104,7 @@ export class Productservice {
     {
       "id": 13,
       "title": "Three Pearl Embellished Panty Set",
-      "price": 19.99,
+      "price": 190.99,
       "description": "Glamorous set of three panties with delicate pearl bead embellishments. Features sheer mesh fabric with strategic pearl detailing for a luxurious feel.",
       "category": "panties",
       "image": "/threepearls.jpeg",
@@ -112,7 +112,7 @@ export class Productservice {
     {
       "id": 14,
       "title": "Seven-Pack Seamless Panty Set",
-      "price": 29.99,
+      "price": 290.99,
       "description": "Ultimate everyday essentials: a seven-pack of seamless panties in neutral and earth tones. No-show design with laser-cut edges, perfect under fitted clothing.",
       "category": "panties",
       "image": "/sevenseamless.jpeg",
@@ -120,7 +120,7 @@ export class Productservice {
     {
       "id": 15,
       "title": "Black & White Lace Bra Set",
-      "price": 32.99,
+      "price": 320.99,
       "description": "Classic black and white contrast lace bra with underwire support and fully adjustable straps. Features a plunge neckline with matching lace details.",
       "category": "bras",
       "image": "/blackwhitebra.jpeg",
@@ -128,7 +128,7 @@ export class Productservice {
     {
       "id": 16,
       "title": "Seamless Multicolor Bra Set",
-      "price": 38.99,
+      "price": 380.99,
       "description": "Pack of four seamless wireless bras in soft neutral tones including nude, blush, taupe, and sage. Ultra-comfortable with a smooth finish and light padding.",
       "category": "bras",
       "image": "/seamlessbraset.jpeg",
@@ -136,7 +136,7 @@ export class Productservice {
     {
       "id": 17,
       "title": "Black Cross-Back Sports Bra",
-      "price": 26.99,
+      "price": 260.99,
       "description": "Stylish black cross-back bra with medium support and removable padding. The strappy cross design doubles as a fashion statement, suitable for workouts or casual wear.",
       "category": "bras",
       "image": "/blackcrossbra.webp",
@@ -144,7 +144,7 @@ export class Productservice {
     {
       "id": 18,
       "title": "Pink Floral Lace Bra",
-      "price": 28.99,
+      "price": 280.99,
       "description": "Feminine pink floral lace underwire bra with a balconette design. Intricate lace overlay with satin bow detail at center front and cushioned underwire.",
       "category": "bras",
       "image": "/pinkbra.webp",
@@ -152,7 +152,7 @@ export class Productservice {
     {
       "id": 19,
       "title": "Five-Pack Wireless T-Shirt Bras",
-      "price": 44.99,
+      "price": 440.99,
       "description": "Essential five-pack of wireless t-shirt bras in nude, black, white, grey, and blush. Lightly padded cups with a smooth moulded finish — invisible under any top.",
       "category": "bras",
       "image": "/fivepiece.jpeg", 
@@ -160,7 +160,7 @@ export class Productservice {
     {
       "id": 20,
       "title": "White Nightwear Robe & Bra Set",
-      "price": 49.99,
+      "price": 490.99,
       "description": "Elegant white satin nightwear set including a kimono-style robe, bralette, and shorts. Soft satin fabric with lace trim accents — ideal for honeymoons or special occasions.",
       "category": "lingerie",
       "image": "public/whiteNightwear.webp",
