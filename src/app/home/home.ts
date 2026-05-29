@@ -23,8 +23,8 @@ export class Home {
     private cartService: Cartservice
   ) {
    this.products = this.productService
-  .getProducts()
-  .slice(0, 4);
+  .getProduct()
+  .slice(0, 5);
   }
 
   addToCart(product: any) {
