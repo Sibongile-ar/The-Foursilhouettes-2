@@ -4,6 +4,7 @@
 	align-items: center;
   min-height: 80vh;
   padding: 24px;
+  background-image: url('https://images.pexels.com/photos/16955596/pexels-photo-16955596.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=4');
 }
 
 .login-wrapper {
