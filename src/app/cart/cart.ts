@@ -31,31 +31,4 @@ export class Cart implements OnInit {
 
     this.total = this.cartService.calculateTotal();
   }
-
-  increaseQty(index: number): void {
-
-    this.cartService.increaseQty(index);
-
-    this.cartItems = this.cartService.getCart();
-
-    this.calculateTotal();
-  }
-
-  decreaseQty(index: number): void {
-
-    this.cartService.decreaseQty(index);
-
-    this.cartItems = this.cartService.getCart();
-
-    this.calculateTotal();
-  }
-
-  removeItem(index: number): void {
-
-    this.cartService.removeItem(index);
-
-    this.cartItems = this.cartService.getCart();
-
-    this.calculateTotal();
-  }
 }
