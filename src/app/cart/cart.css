@@ -50,7 +50,60 @@
 }
 
 .grand-total {
+
     text-align: center;
     margin: 20px;
     color: #ffd6e0;
 }
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 15px 0;
+}
+
+.quantity-controls button {
+    padding: 6px 12px;
+    border: none;
+    background: #d98ca3;
+    color: #2a0a12;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    min-width: 36px;
+    transition: opacity 0.2s ease;
+}
+
+.quantity-controls button:hover {
+    opacity: 0.70;
+}
+
+.quantity-controls span {
+    font-weight: 600;
+    color: white;
+    min-width: 30px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.btn-remove {
+    gap: 10px;
+    padding: 5px 12px;
+    border: 1px solid #d98ca3;
+    background:  #d98ca3;
+    color: #2a0a12;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    margin-top: 20px;
+}
+
+.btn-remove:hover {
+    background: #d98ca3;
+    color: #2a0a12;
+}
+

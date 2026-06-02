@@ -3,32 +3,25 @@
 </div>
 
 <div class="cart-container">
-
   <div class="product-card" *ngFor="let item of cartItems; let i = index">
 
-    <!-- IMAGE -->
-    <img [src]="item.image" alt="{{ item.name }}">
+    <img [src]="item.image" alt="{{ item.title }}">
 
-    <!-- PRODUCT INFO -->
     <h3>{{ item.title }}</h3>
-
     <p>Price: R{{ item.price }}</p>
-
     <p>Size: {{ item.size }}</p>
 
-    <p>Quantity: {{ item.quantity }}</p>
+    <div class="quantity-controls">
+      <button type="button" (click)="cartService.decreaseQty(i)">-</button>
+      <span>{{ item.quantity }}</span>
+      <button type="button" (click)="cartService.increaseQty(i)">+</button>
+    </div>
 
-    <!-- SUBTOTAL -->
     <p class="subtotal">
       Total: R{{ item.price * item.quantity }}
     </p>
+    
+    <button type="button" class="btn-remove" (click)="removeItem(i)">Remove</button>
 
   </div>
-
 </div>
-
-<!-- GRAND TOTAL -->
-
-<h2 class="grand-total">
-  Cart Total: R{{ total }}
-</h2>

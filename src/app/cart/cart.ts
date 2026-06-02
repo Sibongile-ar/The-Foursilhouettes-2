@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { Productservice } from '../services/productservice';
 import { Cartservice } from '../services/cartservice';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-cart',
@@ -15,6 +16,8 @@ export class Cart implements OnInit {
   cartService = inject(Cartservice);
   productService = inject(Productservice);
   productList = this.productService.getProduct();
+
+  toastr = inject(ToastrService);
 
   cartItems: any[] = [];
 
@@ -51,11 +54,24 @@ export class Cart implements OnInit {
   }
 
   removeItem(index: number): void {
+ 
 
     this.cartService.removeItem(index);
 
     this.cartItems = this.cartService.getCart();
 
     this.calculateTotal();
+
+     this.toastr.error('Item Removed!');
+
+
+    
   }
+
+ 
+   constructor(public CartService: Cartservice) {}
 }
+
+
+ 
+ 

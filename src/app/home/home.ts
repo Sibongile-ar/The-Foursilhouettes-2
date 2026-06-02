@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { Productservice } from '../services/productservice';
 import { Cartservice } from '../services/cartservice';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-home',
@@ -14,14 +15,19 @@ import { Cartservice } from '../services/cartservice';
 })
 export class Home {
 
+    toastr = inject(ToastrService)
+
   products: any[] = [];
 
   selectedSizes: { [key: number]: string } = {};
 
+
   constructor(
     private productService: Productservice,
     private cartService: Cartservice
-  ) {
+  ) 
+  
+  {
    this.products = this.productService
   .getProduct()
   .slice(0, 5);
@@ -32,7 +38,7 @@ export class Home {
     const selectedSize = this.selectedSizes[product.id];
 
     if (!selectedSize) {
-      alert('Please select a size!');
+      this.toastr.error('Please select a size!');
       return;
     }
 
@@ -44,6 +50,6 @@ export class Home {
 
     this.cartService.addToCart(cartProduct);
 
-    alert('Added to cart!');
+    this.toastr.success('Added to Cart');
   }
 }
