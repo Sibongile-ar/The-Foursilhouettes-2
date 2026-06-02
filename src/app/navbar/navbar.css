@@ -35,8 +35,60 @@ nav a:hover {
     color: #f5c6d6;
 }
 
+    nav a.active {
+        color: #f5c6d6;
+        border-bottom: 2px solid #d98ca3;
+    }
+
+    .auth-links a.active {
+        background: #d98ca3;
+        color: #140005;
+    }
+
 .cart {
     border: 1px solid #d98ca3;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+.auth-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.auth-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 6px 12px;
+    border: 1px solid #d98ca3;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.auth-links a:hover {
+    background: #d98ca3;
+    color: #140005;
+}
+
+.user-name {
+    color: #f5c6d6;
+    font-size: 14px;
+}
+
+.logout-btn {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #d98ca3;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background: #d98ca3;
+    color: #140005;
 }
