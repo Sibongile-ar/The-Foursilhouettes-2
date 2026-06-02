@@ -1,0 +1,105 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: calc(100vh - 140px);
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background-image: url('https://images.pexels.com/photos/27783585/pexels-photo-27783585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=4');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 380px;
+
+    background: rgba(20, 0, 5, 0.9);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid #d98ca3;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #f5c6d6;
+    font-size: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+input {
+    padding: 12px 14px;
+    border: 1px solid #d98ca3;
+    border-radius: 6px;
+    font-size: 14px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: rgba(245, 198, 214, 0.7);
+}
+
+input:focus {
+    outline: none;
+    border-color: #f5c6d6;
+    box-shadow: 0 0 10px rgba(217, 140, 163, 0.4);
+}
+
+.login-btn {
+    padding: 12px 14px;
+    background: #d98ca3;
+    color: #140005;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    font-weight: 600;
+    font-size: 14px;
+
+    transition: 0.3s;
+    margin-top: 8px;
+}
+
+.login-btn:hover {
+    background: #f5c6d6;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #f5c6d6;
+}
+
+.register-link a {
+    color: #d98ca3;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.register-link a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

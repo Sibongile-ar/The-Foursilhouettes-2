@@ -71,7 +71,3 @@ export class Cart implements OnInit {
  
    constructor(public CartService: Cartservice) {}
 }
-
-
- 
- 
