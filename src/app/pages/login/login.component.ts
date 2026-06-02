@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -17,6 +18,7 @@ export class LoginComponent {
   auth = inject(AuthService);
   router = inject(Router);
   activatedRoute = inject(ActivatedRoute);
+  toastr = inject(ToastrService);
 
   email = '';
   password = '';
@@ -29,7 +31,7 @@ export class LoginComponent {
     );
 
     if (success) {
-      alert('Login successful');
+      this.toastr.success('Login successful');
       
       const returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'];
       if (returnUrl) {
@@ -38,7 +40,7 @@ export class LoginComponent {
         this.router.navigate(['/shop']);
       }
     } else {
-      alert('Invalid credentials');
+      this.toastr.error('Invalid credentials');
     }
   }
 }
