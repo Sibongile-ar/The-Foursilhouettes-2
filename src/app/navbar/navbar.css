@@ -1,5 +1,5 @@
 header {
-    padding: 10px 0;
+    padding: 20px 0;
     background: rgba(20, 0, 5, 0.85);
     border-bottom: 1px solid #d98ca3;
 }
@@ -19,6 +19,7 @@ header h1 {
 nav {
     display: flex;
     gap: 40px;
+    align-items: center; 
 }
 
 nav a {
@@ -39,4 +40,15 @@ nav a:hover {
     border: 1px solid #d98ca3;
     padding: 5px 10px;
     border-radius: 5px;
+}
+
+
+nav span {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
 }
