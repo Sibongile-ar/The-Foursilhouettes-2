@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -14,14 +14,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LoginComponent {
 
+  auth = inject(AuthService);
+  router = inject(Router);
+  activatedRoute = inject(ActivatedRoute);
+
   email = '';
   password = '';
-
-  constructor(
-    private auth: AuthService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute
-  ) {}
 
   login() {
 
@@ -33,7 +31,6 @@ export class LoginComponent {
     if (success) {
       alert('Login successful');
       
-      // Check if there's a return URL in query params
       const returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'];
       if (returnUrl) {
         this.router.navigateByUrl(returnUrl);

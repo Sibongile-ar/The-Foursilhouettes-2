@@ -5,34 +5,22 @@ import { Injectable } from '@angular/core';
 })
 export class Cartservice {
 
-  cart: any[] = [];
-
-  constructor() {
-
-    const savedCart = localStorage.getItem('cart');
-
-    if (savedCart) {
-      this.cart = JSON.parse(savedCart);
-    }
-  }
+  cart: any[] = JSON.parse(localStorage.getItem('cart') || '[]');
 
   addToCart(product: any) {
 
-    // check if product already exists with same size
     const existingProduct = this.cart.find(
       item =>
         item.id === product.id &&
         item.size === product.size
     );
 
-    // increase quantity
     if (existingProduct) {
 
       existingProduct.quantity += 1;
 
     } else {
 
-      // add new product
       this.cart.push({
         id: product.id,
         title: product.title,

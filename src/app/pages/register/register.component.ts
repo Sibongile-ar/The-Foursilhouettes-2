@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -14,16 +14,14 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent {
 
+  auth = inject(AuthService);
+  router = inject(Router);
+
   user = {
     name: '',
     email: '',
     password: ''
   };
-
-  constructor(
-    private auth: AuthService,
-    private router: Router
-  ) {}
 
   register() {
 

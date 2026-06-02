@@ -5,8 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  constructor() { }
-
   register(user: any): boolean {
 
     let users = JSON.parse(localStorage.getItem('users') || '[]');

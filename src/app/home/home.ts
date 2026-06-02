@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -14,18 +14,12 @@ import { Cartservice } from '../services/cartservice';
 })
 export class Home {
 
-  products: any[] = [];
+  productService = inject(Productservice);
+  cartService = inject(Cartservice);
+
+  products: any[] = this.productService.getProduct().slice(0, 5);
 
   selectedSizes: { [key: number]: string } = {};
-
-  constructor(
-    private productService: Productservice,
-    private cartService: Cartservice
-  ) {
-   this.products = this.productService
-  .getProduct()
-  .slice(0, 5);
-  }
 
   addToCart(product: any) {
 
