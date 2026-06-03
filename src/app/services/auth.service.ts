@@ -17,7 +17,14 @@ export class AuthService {
       return false;
     }
 
-    users.push(user);
+    const newUser = {
+      id: Date.now().toString(),
+      name: user.name,
+      email: user.email,
+      password: user.password
+    };
+
+    users.push(newUser);
 
     localStorage.setItem('users', JSON.stringify(users));
 
@@ -35,9 +42,19 @@ export class AuthService {
     );
 
     if (user) {
+      if (!user.id) {
+        user.id = Date.now().toString();
+        localStorage.setItem('users', JSON.stringify(users));
+      }
+
+      const safeUser = {
+        id: user.id,
+        name: user.name,
+        email: user.email
+      };
       localStorage.setItem(
         'currentUser',
-        JSON.stringify(user)
+        JSON.stringify(safeUser)
       );
       return true;
     }

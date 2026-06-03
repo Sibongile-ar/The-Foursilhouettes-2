@@ -106,3 +106,33 @@
     background: #d98ca3;
     color: #2a0a12;
 }
+
+
+.btns {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.checkout {
+    padding: 14px 40px;
+    background: linear-gradient(135deg, #28a745, #0a5a03);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(10, 90, 3, 0.4);
+}
+
+.checkout:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(10, 90, 3, 0.5);
+}
+
+.checkout:active {
+    transform: translateY(1px);
+}

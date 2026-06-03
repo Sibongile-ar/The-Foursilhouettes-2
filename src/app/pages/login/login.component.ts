@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { Cartservice } from '../../services/cartservice';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -16,6 +17,7 @@ import { ToastrService } from 'ngx-toastr';
 export class LoginComponent {
 
   auth = inject(AuthService);
+  cartService = inject(Cartservice);
   router = inject(Router);
   activatedRoute = inject(ActivatedRoute);
   toastr = inject(ToastrService);
@@ -31,6 +33,8 @@ export class LoginComponent {
     );
 
     if (success) {
+      this.cartService.mergeGuestCartIntoUserCart();
+      this.cartService.refreshCart();
       this.toastr.success('Login successful');
       
       const returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'];
