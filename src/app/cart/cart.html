@@ -12,9 +12,9 @@
     <p>Size: {{ item.size }}</p>
 
     <div class="quantity-controls">
-      <button type="button" (click)="cartService.decreaseQty(i)">-</button>
+      <button type="button" (click)="decreaseQty(i)">-</button>
       <span>{{ item.quantity }}</span>
-      <button type="button" (click)="cartService.increaseQty(i)">+</button>
+      <button type="button" (click)="increaseQty(i)">+</button>
     </div>
 
     <p class="subtotal">
@@ -25,3 +25,9 @@
 
   </div>
 </div>
+
+
+<div class="btns">
+  <button type="button" class="checkout">
+    Checkout
+  </button>

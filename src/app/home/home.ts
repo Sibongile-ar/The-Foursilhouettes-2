@@ -48,8 +48,11 @@ export class Home {
       quantity: 1
     };
 
-    this.cartService.addToCart(cartProduct);
-
-    this.toastr.success('Added to Cart');
+    const added = this.cartService.addToCart(cartProduct);
+    if (added) {
+      this.toastr.success('Added to Cart');
+    } else {
+      this.toastr.error('Please login to add items to your cart');
+    }
   }
 }
