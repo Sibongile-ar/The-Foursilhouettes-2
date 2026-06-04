@@ -47,12 +47,9 @@ export class Shop {
       quantity: 1
     };
 
-    const added = this.cartService.addToCart(cartProduct);
-    if (added) {
-      this.toastr.success('Added to Cart');
-    } else {
-      this.toastr.error('Please login to add items to your cart');
-    }
+    this.cartService.addToCart(cartProduct);
+
+     this.toastr.success('Added to Cart');
   }
 
   setCategory(cat: string) {
