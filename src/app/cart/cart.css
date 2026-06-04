@@ -41,7 +41,16 @@
     margin-bottom: 10px;
 }
 
+.total-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    color:#fac2d0;
+    font-size: 18px;
+    font-weight: bold;
 
+}
 
 .subtotal {
     color:#fac2d0;
