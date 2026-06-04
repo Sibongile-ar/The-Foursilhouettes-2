@@ -57,7 +57,6 @@ header h1 {
     text-align: center;
 }
 
-/* PRODUCTS SECTION */
 
 .products {
     display: flex;
@@ -85,7 +84,6 @@ header h1 {
     box-shadow: 0 10px 25px rgba(217, 140, 163, 0.35);
 }
 
-/* SMALLER IMAGES */
 
 .product-card img {
     width: 100%;
@@ -97,7 +95,6 @@ header h1 {
     margin-bottom: 15px;
 }
 
-/* PRODUCT TITLE */
 
 .product-card h3 {
     color: #ffd6e0;
@@ -105,7 +102,6 @@ header h1 {
     margin-bottom: 10px;
 }
 
-/* DESCRIPTION */
 
 .product-card p {
     color: #f5c6d6;
@@ -114,7 +110,6 @@ header h1 {
     margin-bottom: 12px;
 }
 
-/* PRICE */
 
 .price {
     color: #fff;
@@ -123,7 +118,6 @@ header h1 {
     margin-bottom: 15px;
 }
 
-/* SIZE OPTIONS */
 
 .sizes {
     display: flex;
@@ -138,7 +132,6 @@ header h1 {
     font-size: 13px;
 }
 
-/* ADD TO CART BUTTON */
 
 .add-to-cart {
     width: 100%;
@@ -163,7 +156,6 @@ header h1 {
     color: #4d0f1a;
 }
 
-/* ABOUT SECTION */
 
 #about h2 {
     color: #ffd6e0;

@@ -4,6 +4,8 @@ import { Cartservice } from '../services/cartservice';
 import { Productservice } from '../services/productservice';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-shop',
@@ -18,16 +20,26 @@ export class Shop {
 
   cartService = inject(Cartservice);
 
+
+  toastr = inject(ToastrService);
+
   selectedSizes: { [key: number]: string } = {};
+
+  searchText: string = '';
+
+  selectedCategory: string = 'All';
+
+
 
   addToCart(product: any) {
 
     const selectedSize = this.selectedSizes[product.id];
 
     if (!selectedSize) {
-      alert('Please select a size!');
+      this.toastr.error('Please select a size!');
       return;
     }
+
 
     const cartProduct = {
       ...product,
@@ -37,6 +49,25 @@ export class Shop {
 
     this.cartService.addToCart(cartProduct);
 
-    alert('Added to cart!');
+     this.toastr.success('Added to Cart');
+  }
+
+  setCategory(cat: string) {
+    this.selectedCategory = cat;
+  }
+
+
+  filteredList() {
+    return this.productList.filter(product => {
+  
+      const matchesSearch =
+        product.title.toLowerCase().includes(this.searchText.toLowerCase());
+  
+      const matchesCategory =
+        this.selectedCategory === 'All' ||
+        product.category === this.selectedCategory;
+  
+      return matchesSearch && matchesCategory;
+    });
   }
 }

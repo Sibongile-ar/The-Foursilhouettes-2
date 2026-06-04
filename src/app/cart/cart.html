@@ -1,39 +1,36 @@
-<div *ngIf="cartItems.length === 0" class="empty-cart-section">
+<div *ngIf="cartItems.length === 0">
   <p class="empty-cart">Your cart is empty</p>
-  <p class="empty-cart-hint">Add products from the shop to get started</p>
 </div>
 
-<div *ngIf="cartItems.length > 0" class="cart-wrapper">
-  <div class="cart-container">
+<div class="cart-container">
+  <div class="product-card" *ngFor="let item of cartItems; let i = index">
 
-    <div class="product-card" *ngFor="let item of cartItems; let i = index">
+    <img [src]="item.image" alt="{{ item.title }}">
 
-      <!-- IMAGE -->
-      <img [src]="item.image" alt="{{ item.name }}">
+    <h3>{{ item.title }}</h3>
+    <p>Price: R{{ item.price }}</p>
+    <p>Size: {{ item.size }}</p>
 
-      <!-- PRODUCT INFO -->
-      <h3>{{ item.title }}</h3>
-
-      <p class="price">Price: R{{ item.price }}</p>
-
-      <p class="size">Size: {{ item.size }}</p>
-
-      <p class="quantity">Quantity: {{ item.quantity }}</p>
-
-      <!-- SUBTOTAL -->
-      <p class="subtotal">
-        Total: R{{ item.price * item.quantity }}
-      </p>
-
+    <div class="quantity-controls">
+      <button type="button" (click)="decreaseQty(i)">-</button>
+      <span>{{ item.quantity }}</span>
+      <button type="button" (click)="increaseQty(i)">+</button>
     </div>
 
-  </div>
+    <p class="subtotal">
+      Total: R{{ item.price * item.quantity }}
+    </p>
+    
+    <button type="button" class="btn-remove" (click)="removeItem(i)">Remove</button>
 
-  <!-- GRAND TOTAL -->
-  <div class="cart-footer">
-    <h2 class="grand-total">
-      Cart Total: R{{ total }}
-    </h2>
-    <button class="checkout-btn">Proceed to Checkout</button>
   </div>
 </div>
+<div class="total-container" *ngIf="cartItems.length > 0">
+  <h2>Total: R{{ getTotal() }}</h2>
+</div>
+
+
+<div class="btns">
+  <button type="button" class="checkout">
+    Checkout
+  </button>

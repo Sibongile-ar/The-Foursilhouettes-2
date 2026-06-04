@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { Cartservice } from '../../services/cartservice';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -14,14 +16,14 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LoginComponent {
 
+  auth = inject(AuthService);
+  cartService = inject(Cartservice);
+  router = inject(Router);
+  activatedRoute = inject(ActivatedRoute);
+  toastr = inject(ToastrService);
+
   email = '';
   password = '';
-
-  constructor(
-    private auth: AuthService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute
-  ) {}
 
   login() {
 
@@ -31,9 +33,10 @@ export class LoginComponent {
     );
 
     if (success) {
-      alert('Login successful');
+      this.cartService.mergeGuestCartIntoUserCart();
+      this.cartService.refreshCart();
+      this.toastr.success('Login successful');
       
-      // Check if there's a return URL in query params
       const returnUrl = this.activatedRoute.snapshot.queryParams['returnUrl'];
       if (returnUrl) {
         this.router.navigateByUrl(returnUrl);
@@ -41,7 +44,7 @@ export class LoginComponent {
         this.router.navigate(['/shop']);
       }
     } else {
-      alert('Invalid credentials');
+      this.toastr.error('Invalid credentials');
     }
   }
 }
