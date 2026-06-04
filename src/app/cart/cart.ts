@@ -63,11 +63,11 @@ export class Cart implements OnInit {
     this.calculateTotal();
 
      this.toastr.error('Item Removed!');
-
-
     
   }
-
- 
    constructor(public CartService: Cartservice) {}
+
+   getTotal(): number {
+    return this.cartService.calculateTotal();
+  }
 }
